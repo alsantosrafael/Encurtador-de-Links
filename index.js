@@ -1,10 +1,8 @@
 //Variáveis e requisições de bibliotecas
 const Koa = require("koa");
 const bodyparser = require("koa-bodyparser");
-
 const router = require("./src/routes.js"); //Instanciando o Router
 const server = new Koa();
-
 
 //Conversor do JSON
 server.use(bodyparser());

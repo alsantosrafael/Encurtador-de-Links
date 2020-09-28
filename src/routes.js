@@ -4,16 +4,11 @@ const redirect = require("./controllers/short.js").redirect;
 
 const router = new Router(); //Instanciando o Router
 
-
-
-
 //Rotas
 //criando rota do encurtador
 router.post("/encurta", shorter);
 //criando rota de usar o link encurtado e redirecionar para o site
 router.get("/encurta/:id", redirect);
-
-
 
 module.exports = router;
 
