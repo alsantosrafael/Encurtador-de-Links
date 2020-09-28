@@ -4,6 +4,8 @@ const bodyparser = require("koa-bodyparser");
 const router = require("./src/routes.js"); //Instanciando o Router
 const server = new Koa();
 
+require('dotenv').config()
+const PORT = process.env.PORT || 1306;
 //Conversor do JSON
 server.use(bodyparser());
 
@@ -11,6 +13,6 @@ server.use(bodyparser());
 server.use(router.routes());
 
 //Liberando porta para o servidor
-server.listen(8081, () => {
-  console.log("Servidor rodando na porta 8081.");
+server.listen(PORT, () => {
+  console.log(`Servidor rodando na porta ${PORT}.`);
 });
